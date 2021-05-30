@@ -23,8 +23,8 @@ public class Main {
             snapshotList.add(13);
             snapshotList.add(23);
             snapshotList.add(33);
-            //snapshotList.snapshot();
-            //snapshotList.dropPriorSnapshots(2);
+            snapshotList.snapshot();
+            snapshotList.dropPriorSnapshots(2);
 
             int res = snapshotList.getAtVersion(verifyingIndex.get(), verifyingVersion.get());
             System.out.println(String.format("Value at index: %d at version %d is %d",
@@ -38,15 +38,10 @@ public class Main {
             System.out.println(String.format("Value at index: %d at version %d is %d",
                     verifyingIndex.intValue(), verifyingVersion.intValue(), res));
         };
-        //List<Thread> threads = new LinkedList<>();
         for(int i = 0; i < 100; i++){
             Thread thread = new Thread(runnableTask);
-           // threads.add(thread);
             thread.start();
             thread.join();
         }
-
-        //Thread.sleep(15000);
-        //executorService.shutdown();
     }
 }
