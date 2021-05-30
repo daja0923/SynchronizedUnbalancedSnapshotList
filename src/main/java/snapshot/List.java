@@ -18,4 +18,6 @@ public interface List<E> {
     void replace(int index, E element);
 
     Iterator<E> iterator();
+
+    int size();
 }
