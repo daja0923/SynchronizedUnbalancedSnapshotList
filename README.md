@@ -40,3 +40,5 @@ snapshotMap. The element for the index represents for all the snapshot from the 
 Only when the element for the current version is updated with ```replace()```, 
 we add additional value to the index. So, if no update is done the memory usage will be size of the list.
 
+## Note:
+I created my own List interface to keep it simple and clean
