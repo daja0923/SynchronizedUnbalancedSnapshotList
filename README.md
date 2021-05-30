@@ -20,13 +20,13 @@ Data structure must be memory efficient
 
 
 ## Performance on each method (Worst case)
-1. getAtVersion -> O(Log(V)) where V represents number of versions on index
+1. getAtVersion() -> O(Log(V)) where V represents number of versions on index
 2. version() -> O(1)
 3. size() -> O(1)
 4. snapshot() -> O(1)
 5. add() -> O(Log(V)) where V represents current number of versions
 6. replace() -> O(Log(V)), where V represents current number of versions
-7. dropPriorSnapshots() -> O(N*v*LOG(V)), where n represents size of the list, v represents provided version as argument and
+7. dropPriorSnapshots() -> O(N * v * LOG(V)), where n represents size of the list, v represents provided version as argument and
 V represents number of versions
 
 ## Memory space used (Worst case): 
