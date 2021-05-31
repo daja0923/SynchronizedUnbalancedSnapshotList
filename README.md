@@ -42,3 +42,6 @@ we add additional value to the index. So, if no update is done the memory usage 
 
 ## Note:
 I created my own List interface to keep it simple and clean
+##### Reason for using TreeMap for versions
+It is mainly to make ```getAtVersion()``` faster. 
+If simple HashMap is used its speed will go down to O(V) where V stands for the number of versions for the index.
